@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometric Shapes</title>
+    <style>
+        body {
+            background-color: #393E46;
+            background-image: url("https://www.transparenttextures.com/patterns/classy-fabric.png");
+        }
+        div {
+            margin: auto;
+            width: 50%;
+        }
+        h1 {
+            font-family: Helvetica;
+            text-align: center;
+            text-decoration: underline;
+            color: #F2F2F2;
+        }
+        p {
+            font-family: Helvetica;
+            color: #F2F2F2; 
+            text-align: center;
+        }
+    </style>
+    <script>
+        var c = document.getElementById("rectangularPrism");
+        var ctx = c.getContext("webgl");
+        ctx.beginPath();
+        ctx.rect(20, 20, 150, 100);
+        ctx.stroke();
+    </script>
+</head>
+<body>
+    <h1>Geometric Shapes</h1>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <svg width="200" height="100"> 
+                        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                    </svg>
+                </td>
+                <td>
+                    <svg width="200" height="100">
+                        <rect width="200" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+                    </svg>
+                </td>
+                <td>
+                    <svg width="250" height="180">
+                        <rect x="50" y="20" width="150" height="150"
+                        style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+                    </svg>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Circle</p>
+                </td>
+                <td>
+                    <p>Rectangle</p>
+                </td>
+                <td>
+                    <p>Square</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <svg width="250" height="180">
+                        <ellipse cx="100" cy="70" rx="85" ry="55" fill="cyan" style="stroke: #F2F2F2; stroke-width: 5" />
+                    </svg>
+                </td>
+                <td>
+                    <svg height="250" width="200">
+                        <polygon points="100,60 25,200 175,200" class="triangle" style="fill:red;stroke:black;stroke-width:3;opacity:0.5"/>
+                    </svg>
+                </td>
+                <td>
+                    <svg height="250" width="200">
+                        <polygon points="50,60 50,200 175,200" class="triangle" style="fill:blue;stroke:aqua;stroke-width:3;opacity:0.5"/>
+                    </svg>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Ellipse</p>
+                </td>
+                <td>
+                    <p>Triangle</p>
+                </td>
+                <td>
+                    <p>Right Triangle</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <svg width="250" height="100" preserveAspectRatio="none">
+                        <rect x="50" width="200" height="90"  transform="skewX(-20)" style="fill:green;stroke:yellow;stroke-width:3;opacity:0.5"/>
+                    </svg>
+                </td>
+                <td>
+                    <svg width="200" height="200">
+                        <polygon points="100,10 40,198 190,78 10,78 160,198"
+                        style="fill:lime;stroke:lime;stroke-width:5;" />
+                    </svg>
+                </td>
+                <td>
+                    
+                    <svg width="250" height="150">
+                        <polygon points="50,50 50,150 250,150 250,50" stroke="black" stroke-width="1" fill="grey"  />
+                        <polygon points="10,10 10,100 50,150 50,50" stroke="black" stroke-width="1" fill="grey"  />   
+                        <polygon points="10,10 50,50 250,50 200,10" stroke="black" stroke-width="1" fill="grey"  />
+                    </svg>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Parallelogram</p>
+                </td>
+                <td>
+                    <p>Star</p>
+                </td>
+                <td>
+                    <p>Rectangular Prism</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <svg height="250" width="200">
+                        <ellipse cx="100" cy="200" rx="70" ry="30" stroke="black" stroke-width="1" fill="aqua" /> 
+                        <polygon points="30,50 30,200 170,200 170,50" fill="aqua"/>
+                        <ellipse cx="100" cy="50" rx="70" ry="30" stroke="black" stroke-width="1" fill="aqua" />
+                    </svg>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <p>Cylinder</p>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+</body>
+</html>
