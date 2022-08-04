@@ -26,12 +26,12 @@ body {
 
 .sidebar li {
     padding: 20px;
+    transition-duration: 0.5s;
 }
 
 .sidebar li:hover {
     padding-right: 0;
     background-color: #F96D00;
-    transition-delay: 5ms;
 }
 
 .sidebar a {
