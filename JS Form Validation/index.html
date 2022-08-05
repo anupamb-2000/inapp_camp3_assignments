@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="container">
+        <label for="txtname">Name : </label>
+        <input type="text" name="txtname" id="name" placeholder="Name">
+        <p id="errname" class="error"></p>
+        <label for="txtemail">Email : </label>
+        <input type="email" name="txtemail" id="email" placeholder="Email">
+        <p id="erremail" class="error"></p>
+        <label for="txtphno">Phone Number : </label>
+        <input type="tel" name="txtphno" id="phone" placeholder="Phone Number">
+        <p id="errphone" class="error"></p>
+        <label for="txtpswrd">Password : </label>
+        <input type="password" name="txtpswrd" id="pswd1" placeholder="Password">
+        <p id="errpass1" class="error"></p>
+        <label for="txtconfirm">Confirm Password : </label>
+        <input type="password" name="txtconfirm" id="pswd2" placeholder="Password">
+        <p id="errpass2" class="error"></p>
+        <input type="button" id="btn" value="Submit" onclick="validate()">
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
