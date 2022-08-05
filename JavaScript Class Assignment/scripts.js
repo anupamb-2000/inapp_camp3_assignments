@@ -1,4 +1,4 @@
-students = []
+let students = []
 class Student{
     constructor(){
         this.name = undefined;
@@ -26,17 +26,17 @@ class Student{
     }
     edit(name, edit, newValue){
         students.forEach(i => {
-            if(strcmp(i.name,name) == 0){
+            if(i.name === name){
                 i[edit] = newValue;
-                return 1;
+                return false;
             }
         });
     }
     del(name){
         for(var i = 0;i < students.length; i++){
-            if(strcmp(students[i].name === name == 0)){
+            if(students[i].name === name){
                 students.splice(i,1);
-                return 1
+                return false;
             }
         }
     }
@@ -44,7 +44,7 @@ class Student{
 
 s = new Student();
 while(true){
-    choice = parseInt(window.prompt("1. Add \n2. List all \n3. Edit \n4. Delete \n5.Exit"));
+    choice = parseInt(window.prompt("1. Add \n2. List all \n3. Edit \n4. Delete"));
     switch(choice){
         case 1:
             sName = window.prompt("Enter name: ");
@@ -57,22 +57,21 @@ while(true){
             s.list();
             break;
         case 3:
-            name = window.prompt("Enter name of student to edit: ");
+            sname = window.prompt("Enter name of student to edit: ");
             edit = window.prompt("Enter name of field to edit: ");
             newValue = window.prompt("Enter new value: ");
-            flag = s.edit(name, edit.toLowerCase(), newValue);
-            if(flag != 1){
+            var flag = s.edit(sname, edit.toLowerCase(), newValue);
+            console.log(flag);
+            if(flag){
                 alert("No such record found!");
             }
             break;
         case 4:
-            name = window.prompt("Enter name of student to delete: ");
-            flag = s.del();
-            if(flag != 1){
+            sname = window.prompt("Enter name of student to delete: ");
+            var flag = s.del(sname);
+            if(flag){
                 alert("No such record found!");
             }
-            break;
-        case 5:
             break;
         default:
             alert("Invalid Input!");
