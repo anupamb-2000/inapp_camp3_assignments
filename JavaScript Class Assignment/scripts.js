@@ -45,6 +45,7 @@ class Student{
     }
 }
 
+
 s = new Student();
 while(true){
     choice = parseInt(window.prompt("1. Add \n2. List all \n3. Edit \n4. Delete"));
