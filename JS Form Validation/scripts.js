@@ -17,6 +17,9 @@ var validate = function (event) {
     let pswd2 = document.getElementById("pswd2");
     console.log(pswd2.value);
     let flname =  checkEmpty(name);
+    if (flname) {
+        document.getElementById("errname");
+    }
     let flemail = checkEmpty(email);
     let flphone = checkEmpty(phone);
     let flpswd1 = checkEmpty(pswd1);

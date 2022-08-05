@@ -12,15 +12,18 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
     background-color: #F2F2F2;
     border-radius: 3%;
     padding: 2%;
     width: 475px;
-    height: 550px;
+    height: fit-content;
     margin: 5vh auto 0 auto;
     box-shadow: 0px 0px 43px 17px #5C636E50;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 label {
@@ -30,7 +33,7 @@ label {
 input {
     background-color: #F2F2F2;
     padding: 2%;
-    margin: 2%;
+    margin: 1%;
     border: 1px solid #5C636E;
     border-radius: 4px;
 }
@@ -47,4 +50,8 @@ input {
     background-color: #5C636E;
     color: #F2F2F2;
     transition: 0.5s ease-in-out;
+}
+
+.error {
+    visibility: hidden;
 }

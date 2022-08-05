@@ -6,22 +6,24 @@
 </head>
 <body>
     <div class="container">
-        <label for="txtname">Name : </label>
-        <input type="text" name="txtname" id="name" placeholder="Name">
-        <p id="errname" class="error"></p>
-        <label for="txtemail">Email : </label>
-        <input type="email" name="txtemail" id="email" placeholder="Email">
-        <p id="erremail" class="error"></p>
-        <label for="txtphno">Phone Number : </label>
-        <input type="tel" name="txtphno" id="phone" placeholder="Phone Number">
-        <p id="errphone" class="error"></p>
-        <label for="txtpswrd">Password : </label>
-        <input type="password" name="txtpswrd" id="pswd1" placeholder="Password">
-        <p id="errpass1" class="error"></p>
-        <label for="txtconfirm">Confirm Password : </label>
-        <input type="password" name="txtconfirm" id="pswd2" placeholder="Password">
-        <p id="errpass2" class="error"></p>
-        <input type="button" id="btn" value="Submit" onclick="validate()">
+        <form action="" novalidate>
+            <label for="txtname">Name : </label>
+            <input type="text" name="txtname" id="name" placeholder="Name" required>
+            <p id="errname" class="error" aria-live="polite">This field must not be empty!</p>
+            <label for="txtemail">Email : </label>
+            <input type="email" name="txtemail" id="email" placeholder="Email" required minlength="8">
+            <span id="erremail" class="error" aria-live="polite"></span>
+            <label for="txtphno">Phone Number : </label>
+            <input type="tel" name="txtphno" id="phone" placeholder="Phone Number">
+            <span id="errphone" class="error" aria-live="polite"></span>
+            <label for="txtpswrd">Password : </label>
+            <input type="password" name="txtpswrd" id="pswd1" placeholder="Password">
+            <span id="errpass1" class="error" aria-live="polite"></span>
+            <label for="txtconfirm">Confirm Password : </label>
+            <input type="password" name="txtconfirm" id="pswd2" placeholder="Password">
+            <span id="errpass2" class="error" aria-live="polite"></span>
+            <input type="submit" id="btn" value="Submit">
+        </form>
     </div>
     <script src="scripts.js"></script>
 </body>
