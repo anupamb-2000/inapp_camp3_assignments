@@ -25,12 +25,14 @@ class Student{
         });
     }
     edit(name, edit, newValue){
+        let flag = true;
         students.forEach(i => {
             if(i.name === name){
                 i[edit] = newValue;
-                return false;
+                flag = false;
             }
         });
+        return flag;
     }
     del(name){
         for(var i = 0;i < students.length; i++){
@@ -39,6 +41,7 @@ class Student{
                 return false;
             }
         }
+        return true;
     }
 }
 
@@ -61,7 +64,6 @@ while(true){
             edit = window.prompt("Enter name of field to edit: ");
             newValue = window.prompt("Enter new value: ");
             var flag = s.edit(sname, edit.toLowerCase(), newValue);
-            console.log(flag);
             if(flag){
                 alert("No such record found!");
             }
