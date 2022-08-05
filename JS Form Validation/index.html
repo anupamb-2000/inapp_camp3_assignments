@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Form Validation</title>
 </head>
 <body>
     <div class="container">
-        <form action="" novalidate>
-            <label for="txtname">Name : </label>
-            <input type="text" name="txtname" id="name" placeholder="Name" required>
-            <p id="errname" class="error" aria-live="polite">This field must not be empty!</p>
-            <label for="txtemail">Email : </label>
-            <input type="email" name="txtemail" id="email" placeholder="Email" required minlength="8">
-            <span id="erremail" class="error" aria-live="polite"></span>
-            <label for="txtphno">Phone Number : </label>
-            <input type="tel" name="txtphno" id="phone" placeholder="Phone Number">
-            <span id="errphone" class="error" aria-live="polite"></span>
-            <label for="txtpswrd">Password : </label>
-            <input type="password" name="txtpswrd" id="pswd1" placeholder="Password">
-            <span id="errpass1" class="error" aria-live="polite"></span>
-            <label for="txtconfirm">Confirm Password : </label>
-            <input type="password" name="txtconfirm" id="pswd2" placeholder="Password">
-            <span id="errpass2" class="error" aria-live="polite"></span>
-            <input type="submit" id="btn" value="Submit">
+        <form class="form" id="form">
+            <div class="form-control">
+                <label for="txtname">Name : </label>
+                <input type="text" name="txtname" id="name" placeholder="Name">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small id="errname" class="error">This field must not be empty!</small>
+            </div>
+            <div class="form-control">
+                <label for="txtemail">Email : </label>
+                <input type="email" name="txtemail" id="email" placeholder="Email">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small id="erremail" class="error">This field must not be empty!</small>
+            </div>
+            <div class="form-control">
+                <label for="txtphno">Phone Number : </label>
+                <input type="tel" name="txtphno" id="phone" placeholder="Phone Number">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small id="errphone" class="error">This field must not be empty!</small>
+            </div>
+            <div class="form-control">
+                <label for="txtpswrd">Password : </label>
+                <input type="password" name="txtpswrd" id="pswd1" placeholder="Password">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small id="errpass1" class="error">This field must not be empty!</small>
+            </div>
+            <div class="form-control">
+                <label for="txtconfirm">Confirm Password : </label>
+                <input type="password" name="txtconfirm" id="pswd2" placeholder="Password">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small id="errpass2" class="error">This field must not be empty!</small>
+            </div>
+            <button type="submit" id="btn">Submit</button>
         </form>
     </div>
     <script src="scripts.js"></script>

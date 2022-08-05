@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #f2f2f2;
+    background-color: #F2F2F2;
     background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
 }
 
@@ -40,10 +40,11 @@ input {
 
 #btn {
     margin: 5% auto;
-    padding: 2%;
+    padding: 3%;
     width: 30%;
     background-color: #F96D00;
     border: none;
+    border-radius: 5px;
 }
 
 #btn:hover {
@@ -52,6 +53,43 @@ input {
     transition: 0.5s ease-in-out;
 }
 
-.error {
+.form-control {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-control i {
+    position: absolute;
+    top: 50px;
+    right: 15px;
     visibility: hidden;
+}
+
+.form-control.success input {
+    border: 1px solid #2ECC71;
+}
+
+.form-control.err input {
+    border: 1px solid #E74C3C;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #2ECC71;
+    visibility: visible;
+}
+
+.form-control.err i.fa-exclamation-circle {
+    color: #E74C3C;
+    visibility: visible;
+}
+
+.error {
+    margin: 1%;
+    visibility: hidden;
+}
+
+.form-control.err .error {
+    visibility: visible;
+    color: #E74C3C;
 }
