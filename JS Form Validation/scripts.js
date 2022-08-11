@@ -14,6 +14,15 @@ form.addEventListener('submit', (e) => {
 });
 
 function checkInputs() {
+    function setSuccessFor(input) {
+        const formControl = input.parentElement;
+        formControl.className = "form-control success";
+    }
+
+    function isEmail(email) {
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    }
+
     const nameValue = username.value.trim();
     const emailValue = email.value.trim();
     const phoneValue = phone.value.trim();
@@ -66,14 +75,4 @@ function checkInputs() {
 
         formControl.className = "form-control err";
     }
-
-    function setSuccessFor(input) {
-        const formControl = input.parentElement;
-        formControl.className = "form-control success";
-    }
-
-    function isEmail(email) {
-        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-    }
-
 }
